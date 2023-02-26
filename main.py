@@ -1,15 +1,11 @@
-import argparse, os, glob
-from tkinter import ttk
-from tkinter import *
-from PIL import Image
+import argparse, os
 import exiftool
-import json
 import csv
 
 parser = argparse.ArgumentParser(description="This script requires a path to Image folder")
 parser.add_argument("-p", "--path", help="The directory of Image files", type=str)
-args = parser.parse_args()
 valid_images = [".jpg", ".jpeg", ".gif",".png",".tga"]
+args = parser.parse_args()
 
 
 def check_path_argument():
